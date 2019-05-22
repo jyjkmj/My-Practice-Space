@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>下面的例子把 "demo_test.txt" 文件中 id="p1" 的元素的内容，加载到指定的 <div> 元素中</title>
+		<script src="jquery-3.4.1.js"></script>
+		<script>
+			//语法: $(selector).load(URL,data,callback); 
+			//可以把 jQuery 选择器添加到 URL 参数
+			/load() 方法从服务器加载数据，并把返回的数据放入被选元素中
+			//语法: $(selector).load(URL,data,callback); 
+			//必需的 URL 参数规定您希望加载的 URL。
+			//可选的 data 参数规定与请求一同发送的查询字符串键/值对集合。
+			//可选的 callback 参数是 load() 方法完成后所执行的函数名称。
+			$(document).ready(function(){
+			  $("button").click(function(){
+				$("#div1").load("demo_test.txt #p1");
+			  });
+			});
+		</script>
+	</head>
+	<body>
+		<div id="div1"><h2>使用 jQuery AJAX 修改文本</h2></div>
+		<button>获取外部文本</button>
+	</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>下面的例子返回所有 <span> 元素的所有祖先</title>
+		<script src="jquery-3.4.1.js"></script>
+		<script>
+			$(document).ready(function(){
+				$("span").parents().css({"color":"red","border":"2px solid red"});
+			});
+		</script>
+		<style>
+		.ancestors *{
+			display: block;
+			border:2px solid lightgrey;
+			color: lightgrey;
+			padding: 5px;
+			margin: 15px;
+		}
+		</style>
+	</head>
+	<body class="ancestors">body(曾曾祖父元素)
+		<div style="width:500px;">div(曾祖父元素)
+			<ul>ul(祖父元素)
+				<li>li(父元素)
+					<span>span</span>
+				</li>
+			</ul>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="//libs.baidu.com/jquery/1.10.2/jquery.min.js">
+			//blur()
+			//当元素失去焦点时，发生 blur 事件。
+			//blur() 方法触发 blur 事件，或规定当发生 blur 事件时运行的函数
+		</script>
+		<script>
+			$(document).ready(function(){
+			  $("input").focus(function(){
+				$(this).css("background-color","#cccccc");
+			  });
+			  $("input").blur(function(){
+				$(this).css("background-color","#ffffff");
+			  });
+			});
+		</script>
+	</head>
+	<body>
+		Name:<input type="text" name="fullname"><br>
+		Email:<input type="text" name="email">
+	</body>
+</html>

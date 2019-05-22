@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>下面的例子返回 <h2> 的所有同胞元素</title>
+		<script src="jquery-3.4.1.js"></script>
+		<script>
+			//siblings() 方法返回被选元素的所有同胞元素
+			$(document).ready(function(){
+				//找出H2的所有同胞
+				$("h2").siblings().css({"color":"red","border":"2px solid red"});
+			});
+		</script>
+		<style>
+			.siblings *
+			{
+				display: block;
+				border: 2px solid lightgrey;
+				color: lightgrey;
+				padding: 5px;
+				margin: 15px;
+			}
+		</style>
+	</head>
+	<body class="siblings">
+		<div>div父元素
+			<p>p</p>
+			<span>span</span>
+			<h2>h2</h2>
+			<h3>h3</h3>
+			<p>p</p>
+		</div>
+	</body>
+</html>

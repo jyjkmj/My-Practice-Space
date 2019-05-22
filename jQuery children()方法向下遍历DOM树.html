@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>下面的例子返回每个<div>元素的所有直接子元素</title>
+		<script src="jquery-3.4.1.js"></script>
+		<script>
+			//children()方法返回被选元素的所有直接子元素
+			//该方法只会向下一级对DOM树进行遍历
+			$(document).ready(function(){
+				$("div").children().css({"color":"red","border":"2px solid red"});
+			});
+		</script>
+		<style>
+			.descendants *
+			{
+				display: block;
+				border: 2px solid lightgrey;
+				color: lightgrey;
+				padding: 5px;
+				margin: 15px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="descendants" style="width: 500px;">div当前元素
+			<<p>p(儿子元素)
+				<span>span孙子元素</span>
+			</p>
+			<p>
+				<span>span孙子元素</span>
+			</p>
+		</div>
+	</body>
+</html>

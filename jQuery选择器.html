@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js">
+			//通过 id 选取元素语法如下：
+			//$("#test")
+			//通过class选取元素:
+			//$(".text")
+		</script>
+		<script>
+			//点击id等于test的元素被隐藏
+			$(document).ready(function(){
+				$("button").click(function(){
+					$("p").hide();
+					$("h2").hide();
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<h2>这是一个标题</h2>
+		<p>这是一个段落</p>
+		<p>这是另一个段落</p>
+		<button>点我</button>
+	</body>
+</html>

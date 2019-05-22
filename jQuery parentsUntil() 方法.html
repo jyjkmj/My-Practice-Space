@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>下面的例子返回介于 <span> 与 <div> 元素之间的所有祖先元素</title>
+		<script src="jquery-3.4.1.js"></script>
+		<script>
+		$(document).ready(function(){
+		  $("span").parentsUntil("div").css({"color":"red","border":"2px solid red"});
+		});
+		</script>
+		<style>
+			.ancestors *
+			{ 
+				display: block;
+				border: 2px solid lightgrey;
+				color: lightgrey;
+				padding: 5px;
+				margin: 15px;
+			}
+		</style>
+	</head>
+	<body class="ancestors">body曾曾祖父元素
+		<div style="width: 500px;">div曾祖父元素
+			<<ul>ul祖父元素
+				<li>li父元素
+					<span>span</span>
+				</li>
+			</ul>
+		</div>
+	</body>
+</html>

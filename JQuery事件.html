@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js">
+		</script>
+		<script>
+			//$(document).ready()
+			//$(document).ready() 方法允许我们在文档完全加载完后执行函数。该事件方法在 jQuery 语法 章节中已经提到过。
+			// click() 方法是当按钮点击事件被触发时会调用一个函数。
+			// 该函数在用户点击 HTML 元素时执行。
+			// 在下面的实例中，当点击事件在某个 <p> 元素上触发时，隐藏当前的 <p> 元素：
+			$(document).ready(function(){
+				$("p").click(function(){
+					$(this).hide();
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<p>如果你点我我就会消失</p>
+		<p>点我消失!</p>
+		<p>点我也消失!</p>
+	</body>
+</html>

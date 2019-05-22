@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>jQuery 方法 attr()，也提供回调函数。
+		回调函数由两个参数：被选元素列表中当前元素的下标，以及原始（旧的）值。
+		然后以函数新值返回您希望使用的字符串</title>
+		<script src="jquery-3.4.1.js"></script>
+		<script>
+			//下面的例子演示带有回调函数的 attr() 方法
+			$(document).ready(function(){
+				$("button").click(function(){
+					$("#w3cschool").attr("href", function(i, origValue){
+						return origValue + "/jquery";
+					});
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<p><a href="http://www.w3cschool.cn" id="w3cschool">W3Cschool教程</a></p>
+		<button>修改href值</button>
+		<p>点击按钮后，可以点击连接查看href属性是否变化</p>
+	</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="jquery-3.4.1.js"></script>
+		<script>
+		$(document).ready(function(){
+		  $("button").click(function(){
+			$("p").toggle("slow");
+		  });
+		});
+		//可选的 speed 参数规定隐藏/显示的速度，可以取以下值："slow"、"fast" 或毫秒。
+		// 可选的 callback 参数是 toggle() 方法完成后所执行的函数名称。
+		// 可选的 callback 参数，具有以下三点说明：
+		// $(selector)选中的元素的个数为n个，则callback函数会执行n次
+		// callback函数名后加括号，会立刻执行函数体，而不是等到显示/隐藏完成后才执行
+		// callback既可以是函数名，也可以是匿名函数
+		
+		</script>
+	</head>
+	<body>
+		<button>隐藏/显示</button>
+		<p>这是一个文本段落。</p>
+		<p>这是另外一个文本段落。</p>
+	</body>
+</html>

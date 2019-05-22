@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>下面的的例子返回div的所有后代</title>
+		<script src="jquery-3.4.1.js"></script>
+		<script>
+			$(document).ready(function(){
+				$("div").find("*").css({"color":"red","border":"2px solid red"});
+			});
+		</script>
+		<style>
+			.descendants *
+			{
+				display: block;
+				border: 2px solid lightgrey;
+				color: lightgrey;
+				padding: 5px;
+				margin: 15px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="descendants" style="width:500px;">div (当前元素) 
+		  <p>p (儿子元素)
+			<span>span (孙子元素)</span>     
+		  </p>
+		  <p>p (儿子元素)
+			<span>span (孙子元素)</span>
+		  </p> 
+		</div>
+	</body>
+</html>

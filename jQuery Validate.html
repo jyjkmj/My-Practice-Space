@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>jQuery Validate 插件为表单提供了强大的验证功能，让客户端表单验证变得更简单，
+		同时提供了大量的定制选项，满足应用程序各种需求。该插件捆绑了一套有用的验证方法，
+		包括 URL 和电子邮件验证，同时提供了一个用来编写用户自定义方法的 API</title>
+		<script src="http://libs.cdnjs.net/jquery/2.2.1/jquery.js"></script>
+		<script src="http://libs.cdnjs.net/jquery-validate/1.14.0/jquery.validate.min.js"></script>
+		<script src="http://libs.cdnjs.net/jquery-validate/1.14.0/localization/messages_zh.js"></script>
+		<script>
+			$.validator.setDefaults({
+				submitHandler:function(){
+					alert("提交事件！");
+				}
+			});
+			$().ready(function(){
+				$("#commentForm").validate();
+			});
+			//效果就是如果不输入正确的数据就不会跳转到下一个输入框
+		</script>
+		<style>
+			.error{
+				color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<form class="cmxform" id="commentForm" method="get" action="">
+		  <fieldset>
+			<legend>输入您的名字，邮箱，URL，备注。</legend>
+			<p>
+			  <label for="cname">Name (必需, 最小两个字母)</label>
+			  <input id="cname" name="name" minlength="2" type="text" required>
+			</p>
+			<p>
+			  <label for="cemail">E-Mail (必需)</label>
+			  <input id="cemail" type="email" name="email" required>
+			</p>
+			<p>
+			  <label for="curl">URL (可选)</label>
+			  <input id="curl" type="url" name="url">
+			</p>
+			<p>
+			  <label for="ccomment">备注 (必需)</label>
+			  <textarea id="ccomment" name="comment" required></textarea>
+			</p>
+			<p>
+			  <input class="submit" type="submit" value="Submit">
+			</p>
+		  </fieldset>
+		</form>
+	</body>
+</html>

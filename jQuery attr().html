@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>下面的例子演示如何获得链接中 href 属性的值</title>
+		<script src="jquery-3.4.1.js"></script>
+		<script>
+			$(document).ready(function(){
+				$("button").click(function(){
+					alert($("#runoob").attr("href"));
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<p><a href="http://www.w3cschool.cn" id="runoob">W3cshool教程</p>
+		<button>显示href属性的值</button>
+	</body>
+</html>

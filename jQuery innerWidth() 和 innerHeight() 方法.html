@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>下面的例子返回指定的<div>元素的inner-width/height</title>
+		<script src="jquery-3.4.1.js"></script>
+		<script>
+			//innerWidth() 方法返回元素的宽度（包括内边距）。
+			//innerHeight() 方法返回元素的高度（包括内边距）。
+			$(document).ready(function(){
+				$(document).click(function(){
+					var txt="";
+					txt+="div 宽度:"+$("#div1").width()+"</br>";
+					txt+="div 高度:"+$("#div1").height()+"</br>";
+					txt+="div 宽度,包含内边距:"+$("#div1").innerWidth()+"</br>";
+					txt+="div 高度,包含内边距:"+$("#div1").innerHeight();
+					$("#div1").html(txt);
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div id="div1" style="height: 100px;width: 300px;padding: 10px;margin: 3px;border: 1px solid blue;background-color: lightblue;"></div>
+		<br>
+		<button>显示div元素的尺寸</button>
+		<p>innerWidth() - 返回元素的宽度（包含内边距）</p>
+		<p>innerHeight() - 返回元素的高度(包含内边距)</p>
+	</body>
+</html>

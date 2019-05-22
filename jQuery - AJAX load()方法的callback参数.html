@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>下面的例子会在 load() 方法完成后显示一个提示框。如果 load() 方法已成功，则显示"外部内容加载成功！"，而如果失败，则显示错误消息</title>
+		<script src="jquery-3.4.1.js"></script>
+		<script>
+			//在jQuery的load()方法中，无论AJAX请求是否成功，一旦请求完成（complete）后，回调函数（callback）立即被触发。
+			$(document).ready(function(){
+				$("button").click(function(){
+					$("#div1").load("demo_test.txt",function(responesTxt,statusTxt,xhr){
+						if(statusTxt=="success")
+						alert("外部内容加载成功!");
+						if(statusTxt=="error")
+						alert("Error:"+xhr.status+":"+xhr.statusText);
+					});
+				});
+			});
+		</script>
+		
+	</head>
+	<body>
+		<div id="div1"><h2>使用 jQuery AJAX 修改该文本</h2></div>
+		<button>获取外部内容</button>
+	</body>
+</html>

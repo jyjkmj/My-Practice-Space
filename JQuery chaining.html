@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>下面的例子把 css()、slideUp() 和 slideDown() 链接在一起。"p1" 元素首先会变为红色，然后向上滑动，再然后向下滑动</title>
+		<script src="jquery-3.4.1.js"></script>
+		<script>
+			$(document).ready(function(){
+				$("button").click(function(){
+					$("#p1").css("color","red").slideUp(2000).slideDown(2000);
+				});
+			});
+			//当进行链接时，代码行会变得很差。不过，jQuery 语法不是很严格；您可以按照希望的格式来写，包含换行和缩进
+			//如下书写也可以很好地运行：
+			// 实例
+			// $("#p1").css("color","red")
+			//   .slideUp(2000)
+			//   .slideDown(2000);
+			//jQuery 会抛掉多余的空格，并当成一行长代码来执行上面的代码行。
+		</script>
+	</head>
+	<body>
+		<p id="p1">点击按钮隐藏字段</p>
+		<button>点我</button>
+	</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js">
+		</script>
+		<script>
+			$(document).ready(function(){
+				$("input").focus(function(){
+					$(this).css("background-color","#cccccc");
+				});
+				$(document).blur(function(){
+					$(this).css("background-color","#ffffff");
+				});
+			});
+			
+			// focus()
+			// 当元素获得焦点时，发生 focus 事件。
+			// 当通过鼠标点击选中元素或通过 tab 键定位到元素时，该元素就会获得焦点。
+			// focus() 方法触发 focus 事件，或规定当发生 focus 事件时运行的函数
+			
+		</script>
+	</head>
+	<body>
+		Name:<input type="text" name="fullname" /><br>
+		Email:<input type="text" name="email" />
+	</body>
+</html>

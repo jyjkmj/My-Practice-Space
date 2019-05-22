@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>after() 和 before() 方法能够通过参数接收无限数量的新元素。可以通过 text/HTML、jQuery 或者 JavaScript/DOM 来创建新元素。
+		在下面的例子中，我们创建若干新元素。这些元素可以通过 text/HTML、jQuery 或者 JavaScript/DOM 来创建。
+		然后我们通过 after() 方法把这些新元素插到文本中（对 before() 同样有效）</title>
+		<script src="jquery-3.4.1.js"></script>
+		<script>
+			function afterText(){
+				var txt1="<b>I </b>"; //使用html元素创建
+				var txt2=$("<i></i>").text("love ");  //使用jquery创建元素
+				var txt3=document.createElement("big");  //使用DOM创建元素
+				txt3.innerHTML="Jquery!";
+				$("img").after(txt1,txt2,txt3);
+			}
+		</script>
+	</head>
+	<body>
+		<img src="logo.png">
+		<br><br>
+		<button onclick="afterText()">之后插入</button>
+	</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js">
+		</script>
+		<script>
+			$(document).ready(function(){
+				$("#p1").hover(function(){
+					alert("你进入了p1!");
+				},
+				function(){
+					alert("拜拜！现在你离开了p1!");
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<p id="p1">这是一个段落!</p>
+	</body>
+</html>

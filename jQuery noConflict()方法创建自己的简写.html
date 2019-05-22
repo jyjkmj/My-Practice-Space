@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>您也可以创建自己的简写。noConflict() 可返回对 jQuery 的引用，
+		您可以把它存入变量，以供稍后使用。请看这个例子</title>
+		<script src="jquery-3.4.1.js"></script>
+		<script>
+			var jq=$.noConflict();
+			jq(document).ready(function(){
+				jq("button").click(function(){
+					jq("p").text("jQuery 仍在工作");
+				});
+			});
+
+		</script>
+	</head>
+	<body>
+		<p>这是一个段落。</p>
+		<button>点我</button>
+	</body>
+</html>

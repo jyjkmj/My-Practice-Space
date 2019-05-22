@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>下面的例子返回类名为 "1" 的所有 <p> 元素，并且它们是 <div> 的直接子元素</title>
+		<script src="jquery-3.4.1.js"></script>
+		<script>
+			 $(document).ready(function(){
+				$("div").children("p.1").css({"color":"red","border":"2px solid red"}); 
+			 });
+		</script>
+		<style>
+			.descendants *
+			{
+				display: block;
+				border: 2px solid lightgrey;
+				color: lightgrey;
+				padding: 5px;
+				margin: 15px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="descendants" style="width: 500px;">div当前元素
+			<p class="1">p儿子元素
+				<span>span孙子元素</span>
+			</p>
+			<p class="2">p儿子元素
+				<span>span孙子元素</span>
+			</p>
+		</div>
+	</body>
+</html>

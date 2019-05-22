@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>不同盒子淡入和淡出的切换fadeToggle() 方法在 fadeIn() 和 fadeOut() 方法之间切换。
+		如果元素是淡出显示的，fadeToggle() 会使用淡入效果显示它们。
+		如果元素是淡入显示的，fadeToggle() 会使用淡出效果显示它们。</title>
+		<script src="jquery-3.4.1.js"></script>
+		<script>
+			$(document).ready(function(){
+				$("button").click(function(){
+					$("#div1").fadeToggle();
+					$("#div2").fadeToggle("slow");
+					$("#div3").fadeToggle(3000);
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<p>实例演示了 fadeToggle() 使用了不同的 speed(速度) 参数。</p>
+		<button>点击淡入/淡出</button>
+		<br><br>
+		<div id="div1" style="width:80px;height:80px;background-color:red;"></div><br>
+		<div id="div2" style="width:80px;height:80px;background-color:green;"></div><br>
+		<div id="div3" style="width:80px;height:80px;background-color:blue;"></div>
+	</body>
+</html>

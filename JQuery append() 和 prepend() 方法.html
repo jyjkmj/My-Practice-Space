@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>通过 append() 和 prepend() 方法添加若干新元素</title>
+		<script src="jquery-3.4.1.js"></script>
+		<script>
+			//append() 和 prepend() 方法能够通过参数接收无限数量的新元素。可以通过 jQuery 来生成文本/HTML（就像上面的例子那样），
+			//或者通过 JavaScript 代码和 DOM 元素。
+			//在下面的例子中，我们创建若干个新元素。这些元素可以通过 text/HTML、jQuery 或者 JavaScript/DOM 来创建。
+			//然后我们通过 append() 方法把这些新元素追加到文本中（对 prepend() 同样有效）
+			function appendText(){
+				var txt1="<p>文本。</p>"    //使用html标签创建文本
+				var txt2=$("<p></p>").text("文本。");//使用jquery创建文本
+				var txt3=document.createElement("p");//使用dom创建文本text with DOM
+				txt3.innerHTML="文本。";
+				$("body").append(txt1,txt2,txt3);  //追加新元素
+			}
+		</script>
+	</head>
+	<body>
+		<p>这是一个段落</p>
+		<button onclick="appendText()">追加文本</button>
+	</body>
+</html>

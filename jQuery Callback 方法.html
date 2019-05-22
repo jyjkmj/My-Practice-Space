@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Callback 函数在当前动画 100% 完成之后执行</title>
+		<script src="jquery-3.4.1.js"></script>
+		<script>
+			$(document).ready(function(){
+				$("#btn").click(function(){
+					$("p").hide("slow",function(){
+						alert("段落现在被隐藏了");
+					});
+				});
+				
+				$("#btn1").click(function(){
+					$("p").hide(1000);
+					alert("现在段落隐藏了!")
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<button id="btn">隐藏</button>
+		<p>我们隐藏内容,点击隐藏按钮我就会消失</p>
+		<h2>以下实例没有回调函数，警告框会在隐藏效果完成前弹出</h2>
+		<button id="btn1">没有回调的按钮</button>
+	</body>
+</html>
